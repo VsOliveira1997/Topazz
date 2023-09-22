@@ -4,43 +4,38 @@ from api import UserGithub
 
 
 class TestApiRun(unittest.TestCase):
+    response = requests.get('https://api.github.com/users/VsOliveira1997')
+    user = UserGithub().get_user('VsOliveira1997')
+    repo = UserGithub().get_repo(user)
+    merge = UserGithub().merge_repo_user(user)
 
     def test_request_response(self):
-        response = requests.get('https://api.github.com/users/VsOliveira1997')
-        self.assertTrue(response.ok)
+        self.assertTrue(self.response.ok)
 
     def test_get_user(self):
-        response = UserGithub().get_user('VsOliveira1997')
-        self.assertIsNotNone(response)
+        self.assertIsNotNone(self.user)
 
     def test_get_repo(self):
-        user = UserGithub().get_user('VsOliveira1997')
-        response = UserGithub().get_repo(user)
-        self.assertIsNotNone(response)
+        self.assertIsNotNone(self.repo)
 
     def test_merge_repo_user(self):
-        user = UserGithub().get_user('VsOliveira1997')
-        response = UserGithub().merge_repo_user(user)
-        self.assertIsNotNone(response)
-
-    # Error part
+        self.assertIsNotNone(self.merge)
 
     def test_request_response_error(self):
         response = requests.get('https://api.github.com/users/!!')
         self.assertFalse(response)
 
     def test_get_user_error(self):
-        response = UserGithub().get_user('!!')
-        self.assertEquals(response['message'],'Not Found')
+        response = UserGithub().get_user('mshajsndaoquweqweqwe'),
+        self.assertEqual( response['message'],'Not Found')
 
     def test_get_repo_erro(self):
-        response = UserGithub().get_repo({'repos_url':'# https://api.github.com/users/!!/repos'})
-        self.assertEquals(response['message'],'Not Found')
+        response = UserGithub().get_repo({'repos_url':'https://api.github.com/users/asjdiojasdiopjsdiopfjiop/repos/sssssssssssssssssssssss'})
+        self.assertEqual(response['message'],'Not Found')
 
-    def test_request_response_error(self):
-        user = UserGithub().get_user('!!!')
-        response = UserGithub().merge_repo_user(user)
-        self.assertEquals(response,'Algo deu errado')
+    def test_test_merge_repo_user(self):
+        response = UserGithub().merge_repo_user('mshajsndaoquweqweqwe')
+        self.assertEqual(response, 'Algo deu errado')
 
 
 if __name__ == '__main__':

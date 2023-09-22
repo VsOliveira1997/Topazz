@@ -1,0 +1,23 @@
+{
+  "nome": "Vitor Oliviera",
+  "perfil": "VsOliveira1997",
+  "rep_publico": 5,
+  "seguidores": 0,
+  "seguindo": 0,
+  "repos": {
+    "name": [
+      "VsOliveira1997/calculadora-django",
+      "VsOliveira1997/LikedinBot",
+      "VsOliveira1997/Topazz",
+      "VsOliveira1997/tutorial",
+      "VsOliveira1997/VsOliveira1997"
+    ],
+    "fullname": [
+      "calculadora-django",
+      "LikedinBot",
+      "Topazz",
+      "tutorial",
+      "VsOliveira1997"
+    ]
+  }
+}

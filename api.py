@@ -12,15 +12,15 @@ class UserGithub:
         try:
             user = requests.get(url=self.url+user)
             return user.json()
-        except requests.exceptions.HTTPError as e:
-            return e.response.text
+        except:
+            return 'Algo deu errado'
 
     def get_repo(self, user):
         try:
             repos = requests.get(url=user['repos_url'])
             return repos.json()
-        except requests.exceptions.HTTPError as e:
-            return e.response.text
+        except:
+            return 'Algo deu errado'
 
     def merge_repo_user(self,username):
         try:
@@ -37,11 +37,10 @@ class UserGithub:
 
             }, indent=2)
 
-            create_file(rep_user['name'],return_data)
+            create_file(rep_user['login'],return_data)
             return return_data
         except:
             return 'Algo deu errado'
-        # except requests.exceptions.HTTPError as e:
-        #     return e.response.text
+
 
 

@@ -14,10 +14,10 @@ def format_repo(repo_obj):
         return 'Algo deu errado'
 
 def create_file(name, json):
-    try:
-        with open(os.path.join('Usuarios',name+'.txt'), 'w') as f:
-            f.write(json)
-    except:
-        return 'Algo deu errado'
+    print(name)
+    print(json)
+    with open(os.path.join('Usuarios',name+'.txt'), 'w') as f:
+        f.write(json)
+
 
 
