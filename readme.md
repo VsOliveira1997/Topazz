@@ -4,7 +4,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 * Ter Python instalado na maquina
 
-## 🚀 Instalando <nome_do_projeto>
+## 🚀 Instalando o projeto
 
 Para instalar o Topazz, siga estas etapas:
 
@@ -30,9 +30,17 @@ pip install -r requirements.txt
 Para usar Topaz, basta fazer:
 
 ```
-python main <nome_usuario_github>
+python main.py <nome_usuario_github>
 ```
 Exemplo
 ```
-python main VsOliveira1997
+python main.py VsOliveira1997
+```
+
+## :bug: Executando Testes
+
+Para usar os testes basta fazer:
+
+```
+python test_helper.py
 ```
