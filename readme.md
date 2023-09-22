@@ -30,9 +30,17 @@ pip install -r requirements.txt
 Para usar Topaz, basta fazer:
 
 ```
-python main <nome_usuario_github>
+python main.py <nome_usuario_github>
 ```
 Exemplo
 ```
-python main VsOliveira1997
+python main.py VsOliveira1997
+```
+
+## :bug: Executando Testes
+
+Para usar os testes basta fazer:
+
+```
+python test_helper.py
 ```
