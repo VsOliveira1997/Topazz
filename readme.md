@@ -4,7 +4,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 * Ter Python instalado na maquina
 
-## 🚀 Instalando <nome_do_projeto>
+## 🚀 Instalando o projeto
 
 Para instalar o Topazz, siga estas etapas:
 
