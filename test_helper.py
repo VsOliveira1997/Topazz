@@ -4,7 +4,7 @@ from helpers.helpers import format_repo,create_file
 
 
 
-class TestMain(unittest.TestCase):
+class TestHelper(unittest.TestCase):
 
     def test_format_repo(self):
         user = UserGithub().get_user('VsOliveira1997')
