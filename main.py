@@ -1,5 +1,4 @@
-from api import UserGithub
-
+from api.api import UserGithub
 
 def main():
     try:

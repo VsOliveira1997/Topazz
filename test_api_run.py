@@ -1,6 +1,6 @@
 import unittest
 import requests
-from api import UserGithub
+from api.api import UserGithub
 
 
 class TestApiRun(unittest.TestCase):
@@ -27,7 +27,7 @@ class TestApiRun(unittest.TestCase):
 
     def test_get_user_error(self):
         response = UserGithub().get_user('mshajsndaoquweqweqwe'),
-        self.assertEqual( response['message'],'Not Found')
+        self.assertEqual( response[0]['message'],'Not Found')
 
     def test_get_repo_erro(self):
         response = UserGithub().get_repo({'repos_url':'https://api.github.com/users/asjdiojasdiopjsdiopfjiop/repos/sssssssssssssssssssssss'})

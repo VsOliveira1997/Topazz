@@ -3,8 +3,7 @@
 
 import json
 import requests
-from helpers import  format_repo,create_file
-
+from helpers.helpers import  format_repo,create_file
 class UserGithub:
     def __init__(self) -> None:
         self.url = 'https://api.github.com/users/'

@@ -1,6 +1,6 @@
 import unittest
-from api import UserGithub
-from helpers import format_repo,create_file
+from api.api import UserGithub
+from helpers.helpers import format_repo,create_file
 
 
 
